@@ -1,0 +1,70 @@
+<div class="container mt-3">
+  <app-friend *ngIf="showForm" [friend]="friend" (saveEmitter)="saveFriend($event)"></app-friend>
+  <div *ngIf="!showForm">
+    <button class="btn btn-primary mb-3" (click)="create()">Novo Contato</button>
+    <div class="container">
+      <h3>Contatos Cadastrados</h3>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Pesquisar contato..."
+            [(ngModel)]="searchTerm"
+          />
+        </div>
+        <div class="col-md-6">
+          <select
+            class="form-select"
+            [(ngModel)]="selectedCategory"
+            aria-label="Filtrar por categoria"
+          >
+            <option value="">Todas as Categorias</option>
+            <option value="Favoritos">Favoritos</option>
+            <option value="Amigo">Amigo</option>
+            <option value="Familia">Família</option>
+            <option value="Escola">Escola</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Outros">Outros</option>
+          </select>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Apelido</th>
+            <th>Idade</th>
+            <th>Gênero</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>Profissão</th>
+            <th>Telefone</th>
+            <th class="text-end">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let friend of filteredFriends()">
+            <td>{{ friend.id }}</td>
+            <td>{{ friend.name }}</td>
+            <td>{{ friend.social }}</td>
+            <td>{{ friend.origin }}</td>
+            <td>{{ friend.age }}</td>
+            <td>{{ friend.gender }}</td>
+            <td>{{ friend.city }}</td>
+            <td>{{ friend.state }}</td>
+            <td>{{ friend.job }}</td>
+            <td>{{ friend.phone }}</td>
+            <td class="text-end">
+              <button class="btn btn-success me-3" (click)="update(friend)">Alterar</button>
+              <button class="btn btn-danger" *ngIf="friend.id !== undefined" (click)="remove(friend.id)">Remover</button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

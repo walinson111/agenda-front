@@ -1,0 +1,30 @@
+.bg-color{
+    background-color: #C4DFF1;
+    height: 1000px;
+}
+
+.bg-color2{
+    margin: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 50%;
+    height: 600px;
+}
+
+.img{
+    cursor: pointer;
+    margin-top: 7%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 5%;
+}
+
+.img2{
+    cursor: pointer;
+    margin-top: -600px;
+    align-items: right;
+    justify-content: right;
+    display: flex;
+    margin-left: 50%;
+}

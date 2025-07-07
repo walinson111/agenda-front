@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'agenda-front';
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
+  showNavbar = true;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.showNavbar = event.url !== '/start'; 
+      }
+    });
+  }
 }

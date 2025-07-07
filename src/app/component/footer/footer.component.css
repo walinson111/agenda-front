@@ -1,0 +1,20 @@
+.sorry{
+  text-align: center;
+  font-size: 60px;
+  margin-top: 80px;
+}
+
+.login {
+    position:absolute;
+     bottom: 350px;
+      right: 850px;
+      z-index: 9999;
+      font-size: 70px;
+      width: 250px;
+      height: auto;
+      text-align: center;
+}
+
+.login:hover{
+    background-color: #f36eec;
+}

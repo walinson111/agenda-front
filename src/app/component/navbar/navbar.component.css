@@ -1,0 +1,47 @@
+.bg-azul-claro {
+  background-color: #c4dff1;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 40px;
+    color: #f36eec;
+    font-weight: 750;
+}
+
+.opcoes {
+    font-size: 20px;
+    background-color: rgb(72, 152, 218);
+    margin: 6px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.opcoes:hover{
+  background-color: #f36eec;
+}
+
+.sair {
+  font-size: 20px;
+  background-color: rgb(72, 152, 218);
+  margin: 6px;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  float:right;
+}
+
+.sair:hover{
+  background-color: #f33b3b;
+}
+
+.container{
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  position: relative;
+  position: absolute;
+  right: 0;
+}

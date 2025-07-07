@@ -1,0 +1,97 @@
+
+<div>
+<div>
+    <div class="container center">
+    <form #formFriend="ngForm">
+        <h3 class="cadastro">Cadastro</h3>
+        <div class="row">
+            <label for="nome" class="col-form-label">Nome</label>
+            <div>
+                <input type="text" class="form-control input-pequeno" [(ngModel)]="friend.name" name="nome" id="nome" required>
+            </div>
+        </div>
+<div class="row">
+  <label for="tipo" class="col-form-label">Tipo</label>
+  <div>
+    <select class="form-select input-select" [(ngModel)]="friend.social" name="tipo" id="tipo" required>
+      <option value="" disabled selected>Selecione uma categoria</option>
+      <option value="Amigo">Amigo</option>
+      <option value="Familia">Família</option>
+      <option value="Escola">Escola</option>
+      <option value="Trabalho">Trabalho</option>
+      <option value="Outros">Outros</option>
+    </select>
+  </div>
+</div>
+
+                <div class="row">
+            <label for="onde" class="col-form-label">Apelido</label>
+            <div>
+                <input type="text" class="form-control input-pequeno" [(ngModel)]="friend.origin" name="onde" id="onde" required>
+            </div>
+        </div>
+                <div class="row">
+            <label for="idade" class="col-form-label inpu">Idade</label>
+            <div>
+                <input type="number" class="form-control input-select" [(ngModel)]="friend.age" name="idade" id="idade" required>
+            </div>
+        </div>
+                <div class="row">
+            <label for="genero" class="col-form-label">Gênero</label>
+            <div>
+                <input type="text" class="form-control input-pequeno" [(ngModel)]="friend.gender" name="genero" id="genero" required>
+            </div>
+        </div>
+                <div class="row">
+            <label for="cidade" class="col-form-label">Cidade</label>
+            <div>
+                <input type="text" class="form-control input-pequeno" [(ngModel)]="friend.city" name="cidade" id="cidade" required>
+            </div>
+        </div>
+                <div class="row">
+            <label for="estado" class="col-form-label">Estado</label>
+            <div>
+                <input type="text" class="form-control input-pequeno" [(ngModel)]="friend.state" name="estado" id="estado" required>
+            </div>
+        </div>
+                <div class="row">
+            <label for="profissao" class="col-form-label">Profissão</label>
+            <div>
+                <input type="text" class="form-control input-pequeno" [(ngModel)]="friend.job" name="profissao" id="profissao" required>
+            </div>
+        </div>
+                <div class="row">
+            <label for="telefone" class="col-form-label">Telefone</label>
+            <div>
+                <input type="number" class="form-control input-phone" [(ngModel)]="friend.phone" name="telefone" id="telefone" required>
+            </div>
+        </div>
+        <div class="row mt-3">
+  <label class="col-form-label">Favorito</label>
+  <div class="form-check form-switch">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      id="favorito"
+      [(ngModel)]="friend.favorito"
+      name="favorito"
+    />
+    <label class="form-check-label" for="favorito">
+      Tornar favorito
+    </label>
+  </div>
+</div>
+
+        <div class="row mt-4">
+            <div>
+                <button type="submit" class="btn btn-primary me-2" (click)="save()" [disabled]="formFriend.invalid">Salvar</button>
+                <div class="cancel">
+                <button type="button" class="btn btn-danger" (click)="cancel()" >Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+</div>
+</div>

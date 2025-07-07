@@ -1,0 +1,25 @@
+.login {
+    position:absolute;
+     bottom: 90px;
+      right: 280px;
+      z-index: 9999;
+      font-size: 70px;
+      width: 250px;
+      height: auto;
+      text-align: center;
+    }
+
+.login:hover{
+    background-color: #f36eec;
+}
+
+.bg-color {
+    background-color: #c4dff1;
+}
+
+.img{
+    background-size: cover;
+    width: 100vw; 
+    height: 100vh;
+}
+
