@@ -13,7 +13,7 @@ export class FriendService {
   constructor(private http: HttpClient) {}
 
   getFriends(): Observable<Friend[]> {
-    return this.http.get<Friend[]>(`${this.apiUrl}/friends`);
+    return this.http.get<Friend[]>(this.apiUrl);
   }
 
   saveFriend(friend: Friend): Observable<Friend> {
