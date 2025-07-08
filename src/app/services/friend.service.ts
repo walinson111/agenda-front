@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class FriendService {
 
-  private apiUrl = 'http://localhost:8080/friends'; 
+  private apiUrl = 'https://walinson.duckdns.org/friends'; 
 
   constructor(private http: HttpClient) {}
 
   getFriends(): Observable<Friend[]> {
-    return this.http.get<Friend[]>("http://localhost:8080/friends");
+    return this.http.get<Friend[]>("https://walinson.duckdns.org/friends");
   }
 
   saveFriend(friend: Friend): Observable<Friend> {
