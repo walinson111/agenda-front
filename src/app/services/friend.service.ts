@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class FriendService {
 
-  private apiUrl = 'https://agendaw.duckdns.org/friends'; 
+  private apiUrl = 'https://walinson.duckdns.org/friends'; 
 
   constructor(private http: HttpClient) {}
 
